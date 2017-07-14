@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import MyRouter from '@/router/index'
 import {getAdminInfo} from '@/api/getData'
 
 Vue.use(Vuex)
@@ -27,6 +28,7 @@ const actions = {
 			}
 		}catch(err){
 			console.log('您尚未登陆或者session失效')
+            MyRouter.push('/')
 		}
 	}
 }
